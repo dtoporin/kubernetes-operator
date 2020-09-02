@@ -1,0 +1,9 @@
+apiVersion: my.operator/v1
+kind: MySQL
+metadata:
+  name: mysql-instance
+spec:
+  image: mysql:5.7
+  database: mock-database
+  password: secretpassword  # Так делать не нужно, следует использовать secret
+  storage_size: 1Gi
